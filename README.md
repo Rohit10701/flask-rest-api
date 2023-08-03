@@ -37,3 +37,23 @@ Step-3: Run
   > flask run
 ```
 
+# Dockerize 
+Step-1: Build Docker image
+```bash
+  sudo docker build -t corider-restapi-rohit .
+```
+
+Step-2: Run docker
+```bash
+  sudo docker run -d -p 5000:5000 corider-restapi-rohit flask run --host=0.0.0.0
+```
+To check the status :
+```bash
+  sudo docker ps
+```
+
+To close the docker image:
+```bash
+  sudo docker stop <container_id>
+```
+
