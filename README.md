@@ -1,5 +1,18 @@
 
 Note : The os being used is Arch Linux.
+# Getting Started
+
+To test REST Api locally, follow these steps:
+
+
+# Clone the repository:
+```bash
+git clone https://github.com/Rohit10701/Assignment.git
+```
+# Navigate to the project directory:
+```bash
+cd <repository>
+```
 
 # Installing Dependencies
   ```bash
