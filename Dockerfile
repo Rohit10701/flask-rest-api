@@ -11,7 +11,7 @@ COPY . /app
 RUN pip install -r requirements.txt
 
 #rest api will run on 5000
-EXPOSE 8000
+EXPOSE 5000
 
 #command to run
 CMD ["flask","run"]
