@@ -19,7 +19,7 @@ def get_user_by_id(user_id):
     if user:
         return jsonify(user)
     else:
-        return jsonify({"message": "User not found"}), 404
+        return jsonify({"message": "User not found"}), 404 
 
 
 @app.route('/users', methods=['POST'])
