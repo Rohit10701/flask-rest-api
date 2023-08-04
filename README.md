@@ -23,7 +23,7 @@ cd <repository>
 Step-1: Creating virtual enviroment
   ```bash
     python -m venv myenv
-    source source myenv/bin/activate
+    source myenv/bin/activate
   ```
 
 Step-2: Installing libraries

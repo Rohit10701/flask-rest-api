@@ -1,5 +1,4 @@
 dbconfig = {
-    'host': 'localhost',
-    'port': 27017,
+    'uri':"mongodb+srv://Rk10701:Rk10701@cluster0.iltdq1k.mongodb.net/?retryWrites=true&w=majority",
     'database': 'corider-users',
 }
