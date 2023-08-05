@@ -79,3 +79,4 @@ To close the docker image:
 # Reference for flask-restful
 1. https://flask-restful.readthedocs.io/en/latest/quickstart.html
 2. https://marshmallow.readthedocs.io/en/stable/quickstart.html
+3. https://realpython.com/flask-blueprint/#what-a-flask-application-looks-like
