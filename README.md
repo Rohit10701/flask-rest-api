@@ -1,8 +1,27 @@
 
 Note : The os being used is Arch Linux.
 # Getting Started
+This project is a Flask application that performs CRUD (Create, Read, Update, Delete) operations on a MongoDB database for a User resource using a REST API. The application provides HTTP endpoints to interact with the User resource, allowing users to manage user data efficiently.
 
 To test REST Api locally, follow these steps:
+
+## Requirements :
+1. You should have pyhton 3.10 or above
+2. you should have docker installed
+
+To install it [Arch linux]:
+```bash
+  sudo pacman -Syu
+```
+```bash
+  sudo pacman -S python
+  sudo pacman -S python-pip
+```
+```bash
+  sudo pacman -S docker
+```
+
+
 
 
 # Clone the repository:
