@@ -10,6 +10,7 @@ class UserModel:
 
     def find_all_users(self):
         users = list(self.collection.find())
+        # print(users)
         for user in users:
             user['_id'] = str(user['_id'])
         return users
