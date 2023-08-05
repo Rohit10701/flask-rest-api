@@ -1,8 +1,11 @@
-from flask_restful import Resource, reqparse
+from flask import Blueprint, jsonify, request
+from flask_restful import Resource, reqparse,Api
 from models.user_model import UserModel
-from schema.user_schema import UserSchema
-from flask import jsonify
+from schemas.user_schema import UserSchema
 from bson import ObjectId
+
+user_blueprint = Blueprint('user_blueprint', __name__)
+api = Api(user_blueprint)
 
 user_obj = UserModel()
 user_schema = UserSchema()
@@ -22,15 +25,13 @@ class UserResource(Resource):
 
         try:
             users = user_obj.find_all_users()
-            # print("in user_controller",users)
         except Exception as e:
             return {"message": "Error fetching users", "error": str(e)}, 500
 
         return user_schema.dump(users, many=True), 200
 
     def post(self):
-        data = reqparse.request.get_json()
-        #print(data)
+        data = request.get_json()
         errors = user_schema.validate(data)
         if errors:
             return {"message": "Validation errors", "errors": errors}, 400
@@ -43,7 +44,7 @@ class UserResource(Resource):
         return {"message": "User created successfully", "user_id": user_id}, 201
 
     def put(self, user_id):
-        data = reqparse.request.get_json()
+        data = request.get_json()
         errors = user_schema.validate(data)
         if errors:
             return {"message": "Validation errors", "errors": errors}, 400
@@ -68,3 +69,5 @@ class UserResource(Resource):
             return {"message": "User deleted successfully"}, 200
         else:
             return {"message": "User not found"}, 404
+
+api.add_resource(UserResource, '/users', '/users/<string:user_id>')
