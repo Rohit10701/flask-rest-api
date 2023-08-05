@@ -76,3 +76,6 @@ To close the docker image:
   sudo docker stop <container_id>
 ```
 
+# Reference for flask-restful
+1. https://flask-restful.readthedocs.io/en/latest/quickstart.html
+2. https://marshmallow.readthedocs.io/en/stable/quickstart.html
